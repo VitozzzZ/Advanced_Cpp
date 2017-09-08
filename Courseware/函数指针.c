@@ -1,3 +1,4 @@
+//调用qsort函数，将一个unsigned int数组按个位数从小到大顺序排列
 #include <stdio.h>
 #include <stdlib.h>
 int MyCompare(const void * elem1,const void * elem2)
@@ -12,6 +13,7 @@ int main()
 {
     unsigned int an[NUM]={8,123,11,10,4};
     qsort(an,NUM,sizeof(unsigned int),MyCompare);
+    //qsort(void *base，int num,unsigned int width,int(*pfcompare)（const void*，const void*)
     for(int i=0;i<NUM;i++)
         printf("%d",an[i]);
     return 0;
