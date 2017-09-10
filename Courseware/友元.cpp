@@ -20,3 +20,27 @@ int MostExpensiveCar(CCar cars[],int total){
             tmpMax=cars[i].price;
     return tmpMax;
 }
+
+//将一个类的成员函数（包括构造，析构函数）→另一个类的友元
+class B{
+public:
+    void function();
+};
+class A{
+    friend void B::function()();
+};
+
+
+//友元类 A是B的友元类→A的成员函数可以访问B的私有成员
+class CCar{
+private:
+    int price;
+    friend class CDrive;
+};
+class CDrive{
+public:
+    CCar myCar;
+    void ModifyCar(){
+        myCar.price+=1000;  //CDrive是CCar的友元类→可以访问其私有成员
+    }
+};
