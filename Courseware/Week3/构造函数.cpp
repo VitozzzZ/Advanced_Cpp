@@ -1,3 +1,30 @@
+//构造函数 成员函数的一种 名字与类名相同，可以有参数，不能有返回值(void也不行),作用是对对象进行初始化，如给成员变量赋初值
+//构造函数最好设在public下
+
+#include <iostream> 
+using namespace std;
+class Complex {
+private :
+    double real, imag;
+public:
+    void Set( double r, double i );
+    Complex(double r, double i );
+    Complex (double r );
+    Complex (Complex c1, Complex c2);
+};
+Complex::Complex(double r, double i) {
+    real = r; imag = i;
+}
+Complex::Complex(double r) {
+    real = r; imag = 0; }
+Complex::Complex (Complex c1, Complex c2)
+{
+    real = c1.real+c2.real;
+    imag = c1.imag+c2.imag; }
+Complex c1(3) , c2 (1,0), c3(c1,c2);
+// c1 = {3, 0}, c2 = {1, 0}, c3 = {4, 0};
+
+
 #include<iostream>
 using namespace std;
 class CSample{
