@@ -37,3 +37,5 @@ int main(){
     x=y-z;   //相当于x=y.operator-(z)
     return 0;
 }
+
+//赋值运算符= 只能重载为成员函数
