@@ -12,7 +12,7 @@ Complex operator+(const Complex & a,const Complex & b){  //重载为普通函数
     return Complex(a.real+b.real,a.imag+b.imag);
 }
 Complex a(1,2),b(2,3),c;
-c=a+b;
+c=a+b;            //相当于operate+(a,b)
 
 
 //运算符重载为成员函数
