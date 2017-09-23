@@ -31,5 +31,5 @@ Complex Complex::operator+(double r){ //能解释 c+5
 int main(){
     Complex c(0,1);
     c=c+5;
-    c=5+c;
+    c=5+c;   //operator+(5,c)
 }
