@@ -40,7 +40,7 @@ String & String::operator =(const String &s){   //深拷贝
         delete []str;
     if(s.str){
         str=new char[strlen(s.str)+1];
-        strcpy(str,s,str);
+        strcpy(str,s.str);
     }
     else
         str=NULL;
