@@ -63,29 +63,29 @@ int main() {
     lst2.push_back(30);
     lst2.push_front(40);
     lst2.push_back(40);
-    cout << "1) "; PrintList( lst1); cout << endl;
-    cout << "2) "; PrintList( lst2); cout << endl;
+    cout << "1) "; PrintList(lst1); cout << endl;
+    cout << "2) "; PrintList(lst2); cout << endl;
     lst2.sort(); //list容器的sort函数
-    cout << "3) "; PrintList( lst2); cout << endl;
+    cout << "3) "; PrintList(lst2); cout << endl;
     lst2.pop_front();
-    cout << "4) "; PrintList( lst2); cout << endl;
+    cout << "4) "; PrintList(lst2); cout << endl;
     lst1.remove(2); //删除所有和A(2)相等的元素
-    cout << "5) "; PrintList( lst1); cout << endl;
+    cout << "5) "; PrintList(lst1); cout << endl;
     lst2.unique(); //删除所有和前一个元素相等的元素
-    cout << "6) "; PrintList( lst2); cout << endl;
+    cout << "6) "; PrintList(lst2); cout << endl;
     lst1.merge (lst2); //合并 lst2到lst1并清空lst2
-    cout << "7) "; PrintList( lst1); cout << endl;
-    cout << "8) "; PrintList( lst2); cout << endl;
+    cout << "7) "; PrintList(lst1); cout << endl;
+    cout << "8) "; PrintList(lst2); cout << endl;
     lst1.reverse();
-    cout << "9) "; PrintList( lst1); cout << endl;
+    cout << "9) "; PrintList(lst1); cout << endl;
     lst2.push_back (100); lst2.push_back (200); lst2.push_back (300); lst2.push_back (400);
     list<A>::iterator p1, p2, p3;
     p1 = find(lst1.begin(), lst1.end(), 3);
     p2 = find(lst2.begin(), lst2.end(), 200);
     p3 = find(lst2.begin(), lst2.end(), 400);
     lst1.splice(p1, lst2, p2, p3); //将[p2,p3)插入p1之前，并从lst2中删除[p2, p3)
-    cout << "11) ";PrintList( lst1); cout << endl;
-    cout << "12) ";PrintList( lst2); cout << endl;
+    cout << "11) ";PrintList(lst1); cout << endl;
+    cout << "12) ";PrintList(lst2); cout << endl;
 }
 /*****
  1) 1,3,2,4,2,
