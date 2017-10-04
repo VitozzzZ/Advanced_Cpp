@@ -37,7 +37,7 @@ int main(){
 
 
 String & String::operator =(const String &s){   //深拷贝
-    if(str==s.str)
+    if(str==s.str)    //解决s=s的bug
         return *this;
     if(str)
         delete []str;
