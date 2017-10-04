@@ -1,5 +1,8 @@
-#include <iostream>
-using namespace std;
+//C++ string类的初步实现
+
+
+#include <stdio.h>
+#include <string.h>
 class String{
 private:
     char *str;
@@ -26,9 +29,9 @@ String::~String(){
 int main(){
     String s;
     s="Good Luck";
-    cout<<s.c_str()<<endl;
+    printf("%s", s.c_str());
     s="zsq";
-    cout<<s.c_str()<<endl;
+    printf("%s", s.c_str());
     return 0;
 }
 
