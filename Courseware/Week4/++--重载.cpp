@@ -32,13 +32,13 @@ CDemo operator--(CDemo & d,int){
 }
 int main(){
     CDemo d(5);
-    cout << (d++) << ",";
+    cout << (d++) << ",";  //等价于 d.operator++(0);
     cout << d << ",";
-    cout << (++d) << ",";
+    cout << (++d) << ",";  //等价于 d.operator++();
     cout << d << endl;
-    cout << (d--) << ",";
+    cout << (d--) << ",";  //等价于 operator--(d,0);
     cout << d << ",";
-    cout << (--d) << ",";
+    cout << (--d) << ",";  //等价于 operator--(d);
     cout << d << endl;
     return 0;
 }
